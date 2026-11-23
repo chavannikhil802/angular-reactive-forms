@@ -1,12 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [CommonModule, ReactiveFormsModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('reactive-forms-project');
+  
+  email = new FormControl("");
+  password = new FormControl("");
+
+  login() {
+    console.log(this.email.value);
+    console.log(this.password.value);
+  }
 }
