@@ -10,8 +10,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 })
 export class App {
   
-  email = new FormControl("");
-  password = new FormControl("");
+  email = new FormControl("test@test.com");
+  password = new FormControl("test");
 
   login() {
     console.log(this.email.value);
