@@ -17,4 +17,9 @@ export class App {
     console.log(this.email.value);
     console.log(this.password.value);
   }
+
+  reset() {
+    this.email.setValue("");
+    this.password.setValue("");
+  }
 }
