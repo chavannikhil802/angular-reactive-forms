@@ -1,1 +1,14 @@
-<p>form1 works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="handleProfile()" action="" method="post">
+    <input type="text" name="" id="" formControlName="name" placeholder="Enter name">
+    <br><br>
+    <input type="email" name="" id="" formControlName="email" placeholder="Enter email">
+    <br><br>
+    <input type="password" name="" id="" formControlName="password" placeholder="Enter password">
+    <br><br>
+    <button>Submit</button>&nbsp;<button (click)="reset()">Reset</button>
+</form>
+<hr>
+<h2>Form Values</h2>
+<h4>Name - {{loginForm.value.name}}</h4>
+<h4>Email - {{loginForm.value.email}}</h4>
+<h4>Password - {{loginForm.value.password}}</h4>
