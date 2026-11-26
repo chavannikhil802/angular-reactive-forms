@@ -4,8 +4,11 @@
     @if(name?.hasError('required') && name.touched) {
         &nbsp;<span class="error">Please enter your name</span>
     }
+    @if(name?.errors?.['maxlength'] && name.touched) {
+        &nbsp;<span class="error">Please enter valid name</span>
+    } 
     <br><br>
-    
+
     <input type="email" name="" id="" formControlName="email" placeholder="Enter email">
     @if(email?.hasError('required') && email.touched) {
         &nbsp;<span class="error">Please enter your email</span>
