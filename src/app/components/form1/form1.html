@@ -13,6 +13,12 @@
     }    
     <br><br>
     <input type="password" name="" id="" formControlName="password" placeholder="Enter password">
+    @if(password?.hasError('required') && password.touched) {
+        &nbsp;<span class="error">Please enter your password</span>
+    }    
+    @if(password?.errors?.['minlength'] && password.touched) {
+        &nbsp;<span class="error">Please enter valid password</span>
+    }      
     <br><br>
     <button>Submit</button>&nbsp;<button (click)="reset()">Reset</button>
 </form>

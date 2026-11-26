@@ -13,7 +13,7 @@ export class Form1 {
   loginForm = new FormGroup({
     name: new FormControl("nikhil", [Validators.required]),
     email: new FormControl("test@test.com", [Validators.required, Validators.email]),
-    password: new FormControl("1234")
+    password: new FormControl("1234", [Validators.required, Validators.minLength(6)])
   });
 
   get name() {
@@ -22,6 +22,10 @@ export class Form1 {
 
   get email() {
     return this.loginForm.get("email");
+  }
+
+  get password() {
+    return this.loginForm.get("password");
   }
 
   handleProfile() {
