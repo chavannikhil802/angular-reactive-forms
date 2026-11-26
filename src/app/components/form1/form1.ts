@@ -11,9 +11,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class Form1 {
 
   loginForm = new FormGroup({
-    name: new FormControl("nikhil", [Validators.required, Validators.maxLength(20)]),
-    email: new FormControl("test@test.com", [Validators.required, Validators.email]),
-    password: new FormControl("1234", [Validators.required, Validators.minLength(6)])
+    name: new FormControl("", [Validators.required, Validators.maxLength(20)]),
+    email: new FormControl("", [Validators.required, Validators.email]),
+    password: new FormControl("", [Validators.required, Validators.minLength(6)])
   });
 
   get name() {
