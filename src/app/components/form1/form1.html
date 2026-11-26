@@ -1,5 +1,8 @@
 <form [formGroup]="loginForm" (ngSubmit)="handleProfile()" action="" method="post">
     <input type="text" name="" id="" formControlName="name" placeholder="Enter name">
+    @if(name?.hasError('required') && name.touched) {
+        &nbsp;<span class="error">Please enter your name</span>
+    }
     <br><br>
     <input type="email" name="" id="" formControlName="email" placeholder="Enter email">
     <br><br>
