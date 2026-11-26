@@ -5,6 +5,12 @@
     }
     <br><br>
     <input type="email" name="" id="" formControlName="email" placeholder="Enter email">
+    @if(email?.hasError('required') && email.touched) {
+        &nbsp;<span class="error">Please enter your email</span>
+    }    
+    @if(email?.errors?.['email'] && email.touched) {
+        &nbsp;<span class="error">Please enter valid email</span>
+    }    
     <br><br>
     <input type="password" name="" id="" formControlName="password" placeholder="Enter password">
     <br><br>

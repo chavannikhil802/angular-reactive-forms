@@ -12,12 +12,16 @@ export class Form1 {
 
   loginForm = new FormGroup({
     name: new FormControl("nikhil", [Validators.required]),
-    email: new FormControl("test@test.com"),
+    email: new FormControl("test@test.com", [Validators.required, Validators.email]),
     password: new FormControl("1234")
   });
 
   get name() {
     return this.loginForm.get("name");
+  }
+
+  get email() {
+    return this.loginForm.get("email");
   }
 
   handleProfile() {
