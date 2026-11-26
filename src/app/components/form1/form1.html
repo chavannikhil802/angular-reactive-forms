@@ -1,9 +1,11 @@
 <form [formGroup]="loginForm" (ngSubmit)="handleProfile()" action="" method="post">
+
     <input type="text" name="" id="" formControlName="name" placeholder="Enter name">
     @if(name?.hasError('required') && name.touched) {
         &nbsp;<span class="error">Please enter your name</span>
     }
     <br><br>
+    
     <input type="email" name="" id="" formControlName="email" placeholder="Enter email">
     @if(email?.hasError('required') && email.touched) {
         &nbsp;<span class="error">Please enter your email</span>
@@ -12,6 +14,7 @@
         &nbsp;<span class="error">Please enter valid email</span>
     }    
     <br><br>
+
     <input type="password" name="" id="" formControlName="password" placeholder="Enter password">
     @if(password?.hasError('required') && password.touched) {
         &nbsp;<span class="error">Please enter your password</span>
@@ -20,6 +23,7 @@
         &nbsp;<span class="error">Please enter valid password</span>
     }      
     <br><br>
+
     <button>Submit</button>&nbsp;<button (click)="reset()">Reset</button>
 </form>
 <hr>
